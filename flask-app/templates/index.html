@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parse KerMLv2/SysMLv2</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Centered logo -->
+    <div id="logo">
+        <img src="logo.png" alt="Logo" style="max-width: 200px;">
+    </div>
+
+    <!-- Form container -->
+    <div class="form-container">
+        <h1>Parse KerMLv2/SysMLv2 String</h1>
+        <form onsubmit="event.preventDefault(); sendRequest();">
+            <label for="inputString">KML String:</label><br>
+            <div class="textarea-container">
+                <div class="line-numbers"></div>
+                <textarea id="inputString" rows="10" placeholder="Enter string here..."></textarea>
+            </div>
+            <br>
+
+            <label for="parserType">Select Parser:</label><br>
+            <select id="parserType">
+                <option value="0">KerMLv2</option>
+                <option value="1">SysMLv2</option>
+            </select><br><br>
+
+            <button type="submit">Parse</button>
+        </form>
+    </div>
+
+    <!-- Result box -->
+    <div id="result"></div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parse KerMLv2/SysMLv2</title>
+    <link rel="stylesheet" type="text/css" href="~/css/style.css" />
+</head>
+<body>
+    <!-- Centered logo -->
+    <div id="logo">
+        <img src="@Url.Content("~/images/logo.png")" alt="Logo" style="max-width: 400px;">
+    </div>
+
+    <!-- Form container -->
+    <div class="form-container">
+        <h1>Validate KerMLv2 or SysMLv2 Code</h1>
+        <form onsubmit="event.preventDefault(); sendRequest();">
+            <label for="inputString">Enter code:</label><br>
+            <div class="textarea-container">
+                <div class="line-numbers"></div>
+                <textarea id="inputString" rows="10" placeholder="Type here..."></textarea>
+            </div>
+            <br>
+
+            <label for="parserType">Select Parser:</label><br>
+            <select id="parserType">
+                <option value="0">KerMLv2</option>
+                <option value="1">SysMLv2</option>
+            </select><br><br>
+
+            <button type="submit">Validate</button>
+            <button type="button" id="statsButton">File Statistics</button>
+        </form>
+    </div>
+
+    <!-- Result box -->
+    <div id="result"></div>
+
+    <!-- Modal Popup for Stats -->
+    <div id="statsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Statistics</h2>
+            <p id="statsDisplay"></p>
+        </div>
+    </div>
+
+    <script src="~/js/script.js"></script>
+</body>
+</html>

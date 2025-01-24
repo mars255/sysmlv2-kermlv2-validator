@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Include="KerMLv2Validator">
+	    <HintPath>Services\libraries\KerMLv2Validator.dll</HintPath>
+	  </Reference>
+	  <Reference Include="SysMLv2Validator">
+	    <HintPath>Services\libraries\SysMLv2Validator.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Antlr4.Runtime" Version="4.6.6" />
+		<PackageReference Include="Antlr4.CodeGenerator" Version="4.6.6" />
+		<PackageReference Include="Antlr4" Version="4.6.6" />
+	</ItemGroup>
+
+
+</Project>
